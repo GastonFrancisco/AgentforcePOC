@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Agentforce Gradient + Lorem</title>
+  <style>
+    /* Fondo con gradiente al estilo Agentforce (púrpura/magenta → azul cloud) */
+    :root{
+      --af-purple: #7a2df1;   /* púrpura/magenta */
+      --af-violet: #5b2acf;   /* violeta intermedio */
+      --af-blue:   #0176d3;   /* azul cloud/salesforce */
+      --card-bg: rgba(255,255,255,0.14);
+      --card-border: rgba(255,255,255,0.25);
+      --text: #ffffff;
+    }
+
+    html, body {
+      height: 100%;
+      margin: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+      color: var(--text);
+      background: linear-gradient(135deg, var(--af-purple) 0%, var(--af-violet) 45%, var(--af-blue) 100%) fixed;
+    }
+
+    .wrap {
+      min-height: 100%;
+      padding: 48px 24px;
+      display: grid;
+      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      align-content: start;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      backdrop-filter: blur(6px);
+      border-radius: 16px;
+      padding: 18px 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+
+    .card h3 {
+      margin: 0 0 8px 0;
+      font-size: 1.05rem;
+      font-weight: 700;
+    }
+
+    .card p {
+      margin: 0;
+      line-height: 1.5;
+      opacity: 0.95;
+    }
+
+    /* Detalle sutil al pasar el mouse */
+    .card:hover {
+      transform: translateY(-2px);
+      transition: transform .2s ease;
+    }
+
+    /* Contenedor centrado opcional */
+    .header {
+      grid-column: 1 / -1;
+      text-align: center;
+      margin-bottom: 8px;
+    }
+
+    .header h1 {
+      margin: 0 0 4px 0;
+      font-size: clamp(1.4rem, 2.5vw, 2rem);
+      font-weight: 800;
+      letter-spacing: .2px;
+    }
+
+    .header p {
+      margin: 0;
+      opacity: 0.9;
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <header class="header">
+      <h1>Ejemplo Gradient Agentforce</h1>
+      <p>Fondo con gradiente y tarjetas con texto lorem ipsum.</p>
+    </header>
+
+    <section class="card">
+      <h3>Bloque 1</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer at nibh vitae quam porta commodo. Suspendisse potenti.</p>
+    </section>
+
+    <section class="card">
+      <h3>Bloque 2</h3>
+      <p>Praesent finibus, libero a viverra volutpat, nibh odio lacinia mauris, at lacinia massa lacus non ex. Nulla facilisi.</p>
+    </section>
+
+    <section class="card">
+      <h3>Bloque 3</h3>
+      <p>Curabitur euismod urna id risus pulvinar, vitae hendrerit quam dictum. Phasellus egestas nunc vel neque dapibus convallis.</p>
+    </section>
+
+    <section class="card">
+      <h3>Bloque 4</h3>
+      <p>Aliquam erat volutpat. Sed euismod, arcu a pharetra tempor, enim justo luctus erat, at tristique quam massa ac odio.</p>
+    </section>
+
+    <section class="card">
+      <h3>Bloque 5</h3>
+      <p>Vivamus rhoncus, quam nec molestie interdum, nibh arcu interdum dui, at imperdiet dui risus eget lorem. Donec id nisl non sem.</p>
+    </section>
+
+    <section class="card">
+      <h3>Bloque 6</h3>
+      <p>Morbi tincidunt arcu nec urna molestie, non aliquet turpis fringilla. Duis in orci vitae ipsum ullamcorper commodo a vitae risus.</p>
+    </section>
+  </main>
+</body>
+</html>
